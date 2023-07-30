@@ -1,11 +1,43 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Quora Clone - Post Question</title>
+    <title>Questify - Post Answer</title>
+    <style>
+        /* Add your CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            color: #007bff;
+        }
+
+        h2 {
+            margin-top: 20px;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 <body>
-    <h1>Post a Question</h1>
-    <form method="post">
+    <h1>Post an Answer</h1>
+    <h2>Question: {{ question.title }}</h2>
+     <form method="post">
         {% csrf_token %}
         {{ form.as_p }}
         <button type="submit">Post</button>
