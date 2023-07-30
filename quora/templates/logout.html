@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quora Clone - Logout</title>
+</head>
+<body>
+    <h1>Logout Confirmation</h1>
+    <p>Are you sure you want to log out?</p>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit">Logout</button>
+    </form>
+    <a href="{% url 'home' %}">Cancel</a>
+</body>
+</html>

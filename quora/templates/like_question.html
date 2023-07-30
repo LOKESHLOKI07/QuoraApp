@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Like Question</title>
+</head>
+<body>
+    <h1>Like Question</h1>
+    <p>Do you want to like the following question?</p>
+    <p><strong>{{ question.title }}</strong></p>
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit">Like</button>
+    </form>
+    <a href="{% url 'question_detail' question.id %}">Back to Question</a>
+</body>
+</html>

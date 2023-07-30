@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quora Clone - Post Answer</title>
+</head>
+<body>
+    <h1>Post an Answer</h1>
+    <h2>Question: {{ question.title }}</h2>
+     <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Post</button>
+    </form>
+</body>
+</html>
